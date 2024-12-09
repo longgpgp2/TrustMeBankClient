@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Add New Post - SlothUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-lg">
+        <div class="flex items-center justify-center mb-6">
+            <img alt="SlothUI logo" class="w-12 h-12 rounded-full mr-2" height="48"
+                src="https://storage.googleapis.com/a1aa/image/00VfLlcQWN3VVShHEfCDeZAgho6QFvVe6vYw7IRpB17H8XjPB.jpg"
+                width="48" />
+            <span class="text-2xl font-bold text-indigo-600">slothui</span>
+        </div>
+        <h2 class="text-2xl font-bold mb-6 text-center">Add New Post</h2>
+        <form>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="post-title">Title</label>
+                <input class="w-full p-2 rounded border" id="post-title" placeholder="Enter post title" type="text" />
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="post-content">Content</label>
+                <textarea class="w-full p-2 rounded border" id="post-content" placeholder="Write your post content"
+                    rows="6"></textarea>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="post-image">Image</label>
+                <input class="w-full p-2 rounded border" id="post-image" type="file" />
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="post-tags">Tags</label>
+                <input class="w-full p-2 rounded border" id="post-tags" placeholder="Enter tags separated by commas"
+                    type="text" />
+            </div>
+            <button class="w-full bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Post</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Profile Management - SlothUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="bg-indigo-600 text-white w-64 p-4 flex flex-col">
+            <div class="flex items-center mb-6">
+                <img alt="SlothUI logo" class="w-10 h-10 rounded-full mr-2" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/00VfLlcQWN3VVShHEfCDeZAgho6QFvVe6vYw7IRpB17H8XjPB.jpg"
+                    width="40" />
+                <span class="text-xl font-bold">slothui</span>
+            </div>
+            <div class="flex-1">
+                <div class="mb-4">
+                    <input class="w-full p-2 rounded bg-indigo-500 placeholder-white" placeholder="Search"
+                        type="text" />
+                </div>
+                <nav class="space-y-2">
+                    <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                        <i class="fas fa-home mr-2"></i> Feed
+                    </a>
+                    <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                        <i class="fas fa-book mr-2"></i> Stories
+                    </a>
+                    <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                        <i class="fas fa-user-friends mr-2"></i> Friends
+                    </a>
+                    <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                        <i class="fas fa-code mr-2"></i> APIs
+                    </a>
+                    <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                        <i class="fas fa-credit-card mr-2"></i> Subscription
+                    </a>
+                    <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                        <i class="fas fa-cog mr-2"></i> Settings
+                    </a>
+                    <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                        <i class="fas fa-question-circle mr-2"></i> Help & Support
+                    </a>
+                </nav>
+            </div>
+            <div class="mt-4">
+                <button class="w-full bg-indigo-700 p-2 rounded flex items-center justify-center">
+                    <i class="fas fa-star mr-2"></i> Go Pro
+                </button>
+            </div>
+            <div class="mt-4 flex items-center">
+                <img alt="User profile picture" class="w-10 h-10 rounded-full mr-2" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/HAH4jJ3UkopwMR4efoEp1y0ToT3E3CY4aRGrg9rJvjAMfrxnA.jpg"
+                    width="40" />
+                <div>
+                    <div class="font-bold">Azunyan U. Wu</div>
+                    <div class="text-sm">Basic Member</div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-4 bg-white shadow">
+                <input class="w-1/2 p-2 rounded border" placeholder="Search for friends, groups, pages" type="text" />
+                <button class="bg-indigo-600 text-white px-4 py-2 rounded flex items-center">
+                    <i class="fas fa-plus mr-2"></i> Add New Post
+                </button>
+            </div>
+            <!-- Content -->
+            <div class="flex-1 flex overflow-hidden">
+                <!-- Profile Management -->
+                <div class="flex-1 overflow-y-auto p-4">
+                    <div class="bg-white p-6 rounded shadow mb-4">
+                        <h2 class="text-2xl font-bold mb-4">Profile Management</h2>
+                        <div class="flex items-center mb-4">
+                            <img alt="User profile picture" class="w-20 h-20 rounded-full mr-4" height="80"
+                                src="https://storage.googleapis.com/a1aa/image/HAH4jJ3UkopwMR4efoEp1y0ToT3E3CY4aRGrg9rJvjAMfrxnA.jpg"
+                                width="80" />
+                            <div>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded">Change Profile
+                                    Picture</button>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Full Name</label>
+                                <input class="w-full p-2 rounded border" placeholder="Full Name" type="text"
+                                    value="Azunyan U. Wu" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Username</label>
+                                <input class="w-full p-2 rounded border" placeholder="Username" type="text"
+                                    value="azunyandesu" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Email</label>
+                                <input class="w-full p-2 rounded border" placeholder="Email" type="email"
+                                    value="azunyan@example.com" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Bio</label>
+                                <textarea class="w-full p-2 rounded border"
+                                    placeholder="Bio">Product Designer at SlothUI</textarea>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Location</label>
+                                <input class="w-full p-2 rounded border" placeholder="Location" type="text"
+                                    value="San Francisco, CA" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Website</label>
+                                <input class="w-full p-2 rounded border" placeholder="Website" type="url"
+                                    value="https://azunyan.com" />
+                            </div>
+                            <div class="flex justify-end">
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bg-white p-6 rounded shadow mb-4">
+                        <h2 class="text-2xl font-bold mb-4">Account Settings</h2>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Current Password</label>
+                                <input class="w-full p-2 rounded border" placeholder="Current Password"
+                                    type="password" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">New Password</label>
+                                <input class="w-full p-2 rounded border" placeholder="New Password" type="password" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Confirm New Password</label>
+                                <input class="w-full p-2 rounded border" placeholder="Confirm New Password"
+                                    type="password" />
+                            </div>
+                            <div class="flex justify-end">
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded">Update Password</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Right Sidebar -->
+                <div class="w-80 bg-white p-4 shadow">
+                    <!-- Friend Suggestions -->
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold">Friend Suggestions</span>
+                            <a class="text-blue-500" href="#">See All</a>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img alt="Friend 1" class="w-10 h-10 rounded-full mr-2" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/cCBifRYPjI39eE4clVNDK9TMbKFVv8seK41Wb0MlzCoKeXjPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <div class="font-bold">Julia Smith</div>
+                                        <div class="text-sm text-gray-500">@juliasmith</div>
+                                    </div>
+                                </div>
+                                <button class="text-blue-500"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img alt="Friend 2" class="w-10 h-10 rounded-full mr-2" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/ps0jKGAAPaIfNCuxsrftPjLRbeZHpnPflTSazbfMwxKB8vGfE.jpg"
+                                        width="40" />
+                                    <div>
+                                        <div class="font-bold">Vermillion D. Gray</div>
+                                        <div class="text-sm text-gray-500">@vermilliongray</div>
+                                    </div>
+                                </div>
+                                <button class="text-blue-500"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img alt="Friend 3" class="w-10 h-10 rounded-full mr-2" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/gwQfA6oXaxw6Pq9Id6FdhmfL5dfxYJKtUYhu1y5KIjZVeXjPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <div class="font-bold">Mai Senpai</div>
+                                        <div class="text-sm text-gray-500">@maisempai</div>
+                                    </div>
+                                </div>
+                                <button class="text-blue-500"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img alt="Friend 4" class="w-10 h-10 rounded-full mr-2" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/5qvbvF0wscJiPl1akH4efJQcCHJ5HsaY0hqWvrbgT9RDfrxnA.jpg"
+                                        width="40" />
+                                    <div>
+                                        <div class="font-bold">Azunyan U. Wu</div>
+                                        <div class="text-sm text-gray-500">@azunyandesu</div>
+                                    </div>
+                                </div>
+                                <button class="text-blue-500"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img alt="Friend 5" class="w-10 h-10 rounded-full mr-2" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/vqQt9ibnzabhHhw624r81Q3sfZUmNLnY2qDwm8UCfT6XfrxnA.jpg"
+                                        width="40" />
+                                    <div>
+                                        <div class="font-bold">Oarack Babama</div>
+                                        <div class="text-sm text-gray-500">@obama21</div>
+                                    </div>
+                                </div>
+                                <button class="text-blue-500"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Profile Activity -->
+                    <div class="mb-4">
+                        <div class="font-bold mb-2">Profile Activity</div>
+                        <div class="flex items-center mb-2">
+                            <img alt="Activity 1" class="w-10 h-10 rounded-full mr-2" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/nTeCeaQEgBmcz06SO6jn0EAlNZPDUmAC3Nt2cjnKYyHafrxnA.jpg"
+                                width="40" />
+                            <img alt="Activity 2" class="w-10 h-10 rounded-full mr-2" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/WveMROIKvTR8Uy0ruOS4ieeRgumtqISfI6xAXYdxSheg6vGfE.jpg"
+                                width="40" />
+                            <img alt="Activity 3" class="w-10 h-10 rounded-full mr-2" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/ySCroI5cAnrbF9FIejEvkkhtiRRVvGANsCRLVzcUr3ptf14TA.jpg"
+                                width="40" />
+                            <img alt="Activity 4" class="w-10 h-10 rounded-full mr-2" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/7QZlKVYLBCbCO9nuHodGZWauoRWcZEfDDAUfa7dEXJjNfrxnA.jpg"
+                                width="40" />
+                            <img alt="Activity 5" class="w-10 h-10 rounded-full mr-2" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/W4WA46gMwKIWGBfNt568uMYR5dqmbeeddE4F6BAvCpDjeXjPB.jpg"
+                                width="40" />
+                            <img alt="Activity 6" class="w-10 h-10 rounded-full mr-2" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/Djuf1HZ3c4TerkL0dccfO51GjTtvH3cXPeBNSh1sttE68XjPB.jpg"
+                                width="40" />
+                            <img alt="Activity 7" class="w-10 h-10 rounded-full mr-2" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/HreHPGT2wpzcQyDiZKNaIhOAtKuacedlCJCSu0pV9dkIfrxnA.jpg"
+                                width="40" />
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold">+1,158 Followers</div>
+                            <div class="text-green-500">+23% vs last month</div>
+                            <div class="text-sm text-gray-500">You gained a substantial amount of followers this month!
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Upcoming Events -->
+                    <div>
+                        <div class="font-bold mb-2">Upcoming Events</div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-birthday-cake text-indigo-600 mr-2"></i>
+                                <div>
+                                    <div class="font-bold">Friend's Birthday</div>
+                                    <div class="text-sm text-gray-500">Jun 25, 2028</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt text-indigo-600 mr-2"></i>
+                                <div>
+                                    <div class="font-bold">Meeting with Team</div>
+                                    <div class="text-sm text-gray-500">Jul 10, 2028</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-plane text-indigo-600 mr-2"></i>
+                                <div>
+                                    <div class="font-bold">Vacation</div>
+                                    <div class="text-sm text-gray-500">Aug 15, 2028</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

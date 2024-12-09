@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admin - Manage Posts - SlothUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 flex h-screen">
+    <!-- Sidebar -->
+    <div class="bg-indigo-600 text-white w-64 p-4 flex flex-col">
+        <div class="flex items-center mb-6">
+            <img alt="SlothUI logo" class="w-10 h-10 rounded-full mr-2" height="40"
+                src="https://storage.googleapis.com/a1aa/image/00VfLlcQWN3VVShHEfCDeZAgho6QFvVe6vYw7IRpB17H8XjPB.jpg"
+                width="40" />
+            <span class="text-xl font-bold">slothui</span>
+        </div>
+        <div class="flex-1">
+            <div class="mb-4">
+                <input class="w-full p-2 rounded bg-indigo-500 placeholder-white" placeholder="Search" type="text" />
+            </div>
+            <nav class="space-y-2">
+                <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                    <i class="fas fa-home mr-2"></i> Dashboard
+                </a>
+                <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                    <i class="fas fa-users mr-2"></i> Manage Users
+                </a>
+                <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                    <i class="fas fa-file-alt mr-2"></i> Manage Posts
+                </a>
+                <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                    <i class="fas fa-cog mr-2"></i> Settings
+                </a>
+                <a class="flex items-center p-2 rounded hover:bg-indigo-500" href="#">
+                    <i class="fas fa-question-circle mr-2"></i> Help & Support
+                </a>
+            </nav>
+        </div>
+        <div class="mt-4">
+            <button class="w-full bg-indigo-700 p-2 rounded flex items-center justify-center">
+                <i class="fas fa-sign-out-alt mr-2"></i> Logout
+            </button>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-4 bg-white shadow">
+            <h1 class="text-2xl font-bold">Manage Posts</h1>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded flex items-center">
+                <i class="fas fa-plus mr-2"></i> Add New Post
+            </button>
+        </div>
+        <!-- Content -->
+        <div class="flex-1 overflow-y-auto p-4">
+            <div class="bg-white p-6 rounded shadow mb-4">
+                <h2 class="text-xl font-bold mb-4">Post List</h2>
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="px-4 py-2">Title</th>
+                            <th class="px-4 py-2">Author</th>
+                            <th class="px-4 py-2">Date</th>
+                            <th class="px-4 py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Post Row -->
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Amazing UI Design</td>
+                            <td class="px-4 py-2">Julia Smith</td>
+                            <td class="px-4 py-2">2023-10-01</td>
+                            <td class="px-4 py-2">
+                                <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">Edit</button>
+                                <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Post Row -->
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Machine Learning Basics</td>
+                            <td class="px-4 py-2">Vermillion D. Gray</td>
+                            <td class="px-4 py-2">2023-09-25</td>
+                            <td class="px-4 py-2">
+                                <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">Edit</button>
+                                <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Post Row -->
+                        <tr class="border-b">
+                            <td class="px-4 py-2">UI/UX Design Trends</td>
+                            <td class="px-4 py-2">Mai Senpai</td>
+                            <td class="px-4 py-2">2023-09-20</td>
+                            <td class="px-4 py-2">
+                                <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">Edit</button>
+                                <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Post Row -->
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Advanced CSS Techniques</td>
+                            <td class="px-4 py-2">Azunyan U. Wu</td>
+                            <td class="px-4 py-2">2023-09-15</td>
+                            <td class="px-4 py-2">
+                                <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">Edit</button>
+                                <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Post Row -->
+                        <tr class="border-b">
+                            <td class="px-4 py-2">JavaScript Best Practices</td>
+                            <td class="px-4 py-2">Oarack Babama</td>
+                            <td class="px-4 py-2">2023-09-10</td>
+                            <td class="px-4 py-2">
+                                <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">Edit</button>
+                                <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
