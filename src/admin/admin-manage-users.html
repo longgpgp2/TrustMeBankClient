@@ -1,0 +1,194 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Admin Dashboard - Manage Users
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Admin avatar" class="rounded-full w-12 h-12" height="50"
+                    src="https://storage.googleapis.com/a1aa/image/UOB0s9IBec2AAigKY3mnI6wMWmtyA7AfWSwD58YxdpmIEN5TA.jpg"
+                    width="50" />
+                <span class="ml-4 text-gray-700 font-semibold">
+                    Admin
+                </span>
+            </div>
+            <a class="text-blue-500 font-semibold" href="#">
+                Logout
+            </a>
+        </header>
+        <!-- Navigation Bar -->
+        <nav class="bg-white shadow p-4 mt-4 overflow-x-auto">
+            <div class="flex space-x-4 min-w-max">
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-tachometer-alt mr-2">
+                    </i>
+                    Dashboard
+                </button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-users mr-2">
+                    </i>
+                    Users
+                </button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-exchange-alt mr-2">
+                    </i>
+                    Transactions
+                </button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-credit-card mr-2">
+                    </i>
+                    Cards
+                </button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-cogs mr-2">
+                    </i>
+                    Settings
+                </button>
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="flex-grow p-4">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-2xl font-bold text-blue-600">
+                    Manage Users
+                </h2>
+                <div class="mt-4 flex justify-between items-center">
+                    <div class="flex space-x-4">
+                        <input class="p-2 border rounded-lg shadow-inner" id="search" placeholder="Search users..."
+                            type="text" />
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow" onclick="searchUsers()">
+                            Search
+                        </button>
+                    </div>
+                    <div>
+                        <label class="text-gray-700" for="sort">
+                            Sort by:
+                        </label>
+                        <select class="p-2 border rounded-lg shadow-inner" id="sort" onchange="sortUsers()">
+                            <option value="name">
+                                Name
+                            </option>
+                            <option value="email">
+                                Email
+                            </option>
+                            <option value="role">
+                                Role
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b">
+                                    Name
+                                </th>
+                                <th class="py-2 px-4 border-b">
+                                    Email
+                                </th>
+                                <th class="py-2 px-4 border-b">
+                                    Role
+                                </th>
+                                <th class="py-2 px-4 border-b">
+                                    Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-list">
+                            <!-- User list items will appear here -->
+                            <tr>
+                                <td class="py-2 px-4 border-b">
+                                    John Doe
+                                </td>
+                                <td class="py-2 px-4 border-b">
+                                    john.doe@example.com
+                                </td>
+                                <td class="py-2 px-4 border-b">
+                                    User
+                                </td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="bg-blue-500 text-white px-2 py-1 rounded-lg shadow">
+                                        Edit
+                                    </button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded-lg shadow">
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">
+                                    Jane Smith
+                                </td>
+                                <td class="py-2 px-4 border-b">
+                                    jane.smith@example.com
+                                </td>
+                                <td class="py-2 px-4 border-b">
+                                    Admin
+                                </td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="bg-blue-500 text-white px-2 py-1 rounded-lg shadow">
+                                        Edit
+                                    </button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded-lg shadow">
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        function searchUsers() {
+            const searchQuery = document.getElementById('search').value.toLowerCase();
+            const userList = document.getElementById('user-list');
+            const rows = userList.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                const name = cells[0].textContent.toLowerCase();
+                const email = cells[1].textContent.toLowerCase();
+
+                if (name.includes(searchQuery) || email.includes(searchQuery)) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+
+        function sortUsers() {
+            const sortBy = document.getElementById('sort').value;
+            const userList = document.getElementById('user-list');
+            const rows = Array.from(userList.getElementsByTagName('tr'));
+
+            rows.sort((a, b) => {
+                const cellA = a.getElementsByTagName('td')[sortBy === 'name' ? 0 : sortBy === 'email' ? 1 : 2].textContent.toLowerCase();
+                const cellB = b.getElementsByTagName('td')[sortBy === 'name' ? 0 : sortBy === 'email' ? 1 : 2].textContent.toLowerCase();
+
+                if (cellA < cellB) return -1;
+                if (cellA > cellB) return 1;
+                return 0;
+            });
+
+            userList.innerHTML = '';
+            rows.forEach(row => userList.appendChild(row));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Admin avatar" class="rounded-full w-12 h-12" src="https://placehold.co/50x50" />
+                <span class="ml-4 text-gray-700 font-semibold">Admin</span>
+            </div>
+            <a class="text-blue-500 font-semibold" href="#">Logout</a>
+        </header>
+        <!-- Navigation Bar -->
+        <nav class="bg-white shadow p-4 mt-4 overflow-x-auto">
+            <div class="flex space-x-4 min-w-max">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-tachometer-alt mr-2"></i> Dashboard
+                </button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-users mr-2"></i> Users
+                </button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-exchange-alt mr-2"></i> Transactions
+                </button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-credit-card mr-2"></i> Cards
+                </button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow flex items-center">
+                    <i class="fas fa-cogs mr-2"></i> Settings
+                </button>
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="flex-grow p-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Statistics -->
+                <div class="lg:col-span-3 bg-white rounded-lg shadow p-6">
+                    <h2 class="text-2xl font-bold text-blue-600">Statistics</h2>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Total Users -->
+                        <div class="bg-blue-500 text-white rounded-lg shadow p-4">
+                            <h3 class="text-lg font-semibold">Total Users</h3>
+                            <p class="text-2xl mt-2">1,234</p>
+                        </div>
+                        <!-- Total Transactions -->
+                        <div class="bg-green-500 text-white rounded-lg shadow p-4">
+                            <h3 class="text-lg font-semibold">Total Transactions</h3>
+                            <p class="text-2xl mt-2">5,678</p>
+                        </div>
+                        <!-- Total Cards -->
+                        <div class="bg-red-500 text-white rounded-lg shadow p-4">
+                            <h3 class="text-lg font-semibold">Total Cards</h3>
+                            <p class="text-2xl mt-2">789</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Admin Actions History -->
+                <div class="lg:col-span-3 bg-white rounded-lg shadow p-6">
+                    <h2 class="text-2xl font-bold text-blue-600">Admin Actions History</h2>
+                    <div class="mt-4 overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Date</th>
+                                    <th class="py-2 px-4 border-b">Action</th>
+                                    <th class="py-2 px-4 border-b">Details</th>
+                                    <th class="py-2 px-4 border-b">Admin</th>
+                                </tr>
+                            </thead>
+                            <tbody id="action-history">
+                                <!-- Action history items will appear here -->
+                                <tr>
+                                    <td class="py-2 px-4 border-b">2023-10-01</td>
+                                    <td class="py-2 px-4 border-b">Created User</td>
+                                    <td class="py-2 px-4 border-b">John Doe (john.doe@example.com)</td>
+                                    <td class="py-2 px-4 border-b">Admin1</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">2023-10-02</td>
+                                    <td class="py-2 px-4 border-b">Updated User</td>
+                                    <td class="py-2 px-4 border-b">Jane Smith (jane.smith@example.com)</td>
+                                    <td class="py-2 px-4 border-b">Admin2</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">2023-10-03</td>
+                                    <td class="py-2 px-4 border-b">Deleted User</td>
+                                    <td class="py-2 px-4 border-b">John Doe (john.doe@example.com)</td>
+                                    <td class="py-2 px-4 border-b">Admin1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
