@@ -14,6 +14,7 @@ export default function Login() {
             const response = await api.get('http://localhost:8080/auth/info');
             console.log('Protected data:', response.data);
             window.localStorage.setItem("username", response.data.result.username);
+            window.localStorage.setItem("name", response.data.result.fullName);
             window.localStorage.setItem("role", response.data.result.role);
             const role = localStorage.getItem("role");
             if (role.includes("ADMIN")) window.location.href = '/admin';
